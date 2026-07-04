@@ -1,0 +1,23 @@
+@Helpdesk.Api_HostAddress = http://localhost:5080
+@token = replace-with-token
+
+POST {{Helpdesk.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "Password123!"
+}
+
+###
+
+GET {{Helpdesk.Api_HostAddress}}/api/auth/me
+Authorization: Bearer {{token}}
+
+###
+
+GET {{Helpdesk.Api_HostAddress}}/api/tickets
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
