@@ -1,6 +1,6 @@
 <div align="center">
 
-# IT Helpdesk & Asset Management System
+# Helpdesk Management System
 
 **Full-stack web application for internal IT support, ticket workflows and company asset inventory.**
 
@@ -36,10 +36,6 @@ A portfolio-oriented technical project combining an **ASP.NET Core Web API**, **
     <td><strong>Frontend</strong><br />React operations console with a minimal dark UI, PL/EN switch and stable SPA URLs.</td>
   </tr>
 </table>
-
-## Author
-
-- Robert Tworek
 
 ---
 
@@ -461,7 +457,6 @@ GitHub Actions runs backend build/tests, frontend lint/build/E2E and Docker Comp
 | [docs/architecture.md](docs/architecture.md) | Project modules, role model, API surface and ER diagram |
 | [docs/ldap-active-directory.md](docs/ldap-active-directory.md) | LDAP/Active Directory integration concept |
 | [docs/qa-report.md](docs/qa-report.md) | Latest QA pass, test matrix and Docker note |
-| [Plan projektu IT Helpdesk.pdf](Plan%20projektu%20IT%20Helpdesk.pdf) | Original Polish project brief |
 
 ---
 
@@ -502,9 +497,9 @@ These are intentionally left as future work rather than required scope for the p
 
 ---
 
-## GitHub / CV Summary
+## Summary
 
-**IT Helpdesk & Asset Management System**  
+**Helpdesk Management System**  
 ASP.NET Core, React, TypeScript, PostgreSQL, Entity Framework Core, Docker
 
 Full-stack web application for managing internal IT support tickets and company assets. Includes role-based access control, ticket workflow, public/internal comments, attachments, SLA calculation, audit history, asset assignment, dashboard statistics, PostgreSQL relational persistence, CSV/PDF exports, API tests, Playwright E2E tests and Docker-based local setup.
