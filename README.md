@@ -13,6 +13,7 @@ A portfolio-oriented technical project combining an **ASP.NET Core Web API**, **
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-22D3EE?style=for-the-badge&logo=postgresql&logoColor=111827)
 ![Docker](https://img.shields.io/badge/Docker-Compose-111827?style=for-the-badge&logo=docker&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-E2E-A78BFA?style=for-the-badge)
+[![ci](https://img.shields.io/github/actions/workflow/status/tworekrobert/helpdesk-management-system/ci.yml?branch=main&style=for-the-badge&label=tests)](https://github.com/tworekrobert/helpdesk-management-system/actions/workflows/ci.yml)
 
 <br />
 
