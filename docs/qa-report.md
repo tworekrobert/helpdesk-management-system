@@ -4,7 +4,7 @@ Last verified: 2026-07-04
 
 ## Scope Decision
 
-The project PDF separates the core Definition of Done from possible future improvements.
+The project plan separates the core Definition of Done from possible future improvements.
 
 Core delivery remains focused on a working internal IT helpdesk and asset management application:
 
@@ -15,13 +15,13 @@ Core delivery remains focused on a working internal IT helpdesk and asset manage
 - asset creation, assignment, CSV import/export and ticket linking
 - Docker Compose setup, CI workflow, README, screenshots and architecture docs
 
-The following items are intentionally documented as future improvements rather than required for the portfolio-ready build:
+Left as future improvements:
 
 - SMTP worker for processing queued email notifications
 - frontend subscription to the existing SignalR ticket update hub
 - LDAP/Active Directory proof-of-concept adapter
 
-Several future-scope items from the PDF are already implemented, including attachments, CSV/PDF dashboard export, ticket tags, asset CSV import and a backend SignalR hub.
+Several future-scope items from the plan are already implemented, including attachments, CSV/PDF dashboard export, ticket tags, asset CSV import and a backend SignalR hub.
 
 ## Verification Matrix
 

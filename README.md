@@ -4,7 +4,7 @@
 
 **Full-stack web application for internal IT support, ticket workflows and company asset inventory.**
 
-A portfolio-oriented technical project combining an **ASP.NET Core Web API**, **React + TypeScript** operations console and **PostgreSQL** relational database. The system covers role-based helpdesk work, ticket lifecycle management, comments, internal notes, SLA tracking, audit history, asset assignment, dashboard reporting, CSV/PDF exports, Playwright E2E tests and Docker-based local setup.
+A project combining an **ASP.NET Core Web API**, **React + TypeScript** operations console and **PostgreSQL** relational database. The system covers role-based helpdesk work, ticket lifecycle management, comments, internal notes, SLA tracking, audit history, asset assignment, dashboard reporting, CSV/PDF exports, Playwright E2E tests and Docker-based local setup.
 
 <br />
 
@@ -31,7 +31,7 @@ A portfolio-oriented technical project combining an **ASP.NET Core Web API**, **
 
 <table>
   <tr>
-    <td><strong>Context</strong><br />Portfolio project based on an internal IT support and asset management brief.</td>
+    <td><strong>Context</strong><br />Personal project built from an internal IT support and asset management brief.</td>
     <td><strong>Backend</strong><br />ASP.NET Core Web API with layered projects, JWT auth and role-based authorization.</td>
     <td><strong>Database</strong><br />PostgreSQL, Entity Framework Core migrations, relational constraints and seed data.</td>
     <td><strong>Frontend</strong><br />React operations console with a minimal dark UI, PL/EN switch and stable SPA URLs.</td>
@@ -85,7 +85,7 @@ A portfolio-oriented technical project combining an **ASP.NET Core Web API**, **
 
 ## What The Project Shows
 
-This repository demonstrates a complete business-style application rather than isolated CRUD screens.
+A complete business-style application, not a set of isolated CRUD screens.
 
 <table>
   <tr>
@@ -430,8 +430,8 @@ Most recent verification:
 | Backend unit tests | Passed, 14/14 |
 | Browser E2E tests | Passed, 9/9 |
 | Role permission smoke test | Passed for Employee and Technician restrictions |
-| README screenshots | Refreshed from frontend connected to the local API |
-| Backend integration tests | Require Docker/Testcontainers |
+| Backend integration tests | Passed, 23/23 (Testcontainers PostgreSQL, run in CI) |
+| README screenshots | Taken from the frontend connected to the local API |
 
 The Playwright suite covers:
 
@@ -477,7 +477,7 @@ GitHub Actions runs backend build/tests, frontend lint/build/E2E and Docker Comp
 
 ## Possible Future Improvements
 
-These are intentionally left as future work rather than required scope for the portfolio-ready build:
+Left out of the current scope on purpose:
 
 - SMTP worker for processing queued email notifications
 - Frontend subscription to the existing SignalR ticket update hub

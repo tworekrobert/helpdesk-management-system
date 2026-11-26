@@ -1,6 +1,6 @@
 # LDAP / Active Directory Integration Concept
 
-This project currently uses seeded local accounts and JWT authentication so reviewers can run it with one command. In a company deployment, the authentication boundary can be moved to LDAP or Active Directory without changing the ticket and asset workflows.
+This project currently uses seeded local accounts and JWT authentication so it runs with one command. In a company deployment, the authentication boundary can be moved to LDAP or Active Directory without changing the ticket and asset workflows.
 
 ## Goals
 
@@ -57,4 +57,4 @@ A production-ready version can add:
 - a feature flag such as `Authentication:Mode = Local | Ldap`
 - integration tests with a disposable LDAP container or contract tests around the authenticator
 
-This keeps the portfolio demo simple while showing how the system would fit into a real internal IT environment.
+This keeps the local setup simple while showing how the system would fit into a real internal IT environment.
