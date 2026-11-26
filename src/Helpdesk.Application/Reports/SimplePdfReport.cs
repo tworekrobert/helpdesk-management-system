@@ -63,7 +63,7 @@ public static class SimplePdfReport
         if (lines.Count > MaxLines)
         {
             builder.AppendLine("0 -17 Td");
-            builder.AppendLine("(Report truncated to fit a single portfolio preview page.) Tj");
+            builder.AppendLine("(Report truncated to fit on one page.) Tj");
         }
 
         builder.AppendLine("ET");
