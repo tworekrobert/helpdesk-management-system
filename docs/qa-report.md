@@ -1,6 +1,6 @@
 # QA Report
 
-Last verified: 2026-07-04
+Local checks: 2026-07-04. Integration tests and `docker compose config` also run in GitHub Actions on every push.
 
 ## Scope Decision
 
@@ -33,8 +33,8 @@ Several future-scope items from the plan are already implemented, including atta
 | Backend unit tests | `dotnet test tests/Helpdesk.UnitTests/Helpdesk.UnitTests.csproj` | Passed, 14/14 |
 | Browser E2E tests | `PLAYWRIGHT_PORT=5175 VITE_API_URL=http://127.0.0.1:5080 npm run e2e -- --workers=1` in `frontend` | Passed, 9/9 against the local API |
 | Role permission smoke test | local HTTP smoke script against `http://127.0.0.1:5080/api` | Passed: Technician ticket creation is forbidden; Employee assign, internal comment and audit access are forbidden; Employee lists remain own-only |
-| README screenshots | `SCREENSHOT_BASE_URL=http://127.0.0.1:5175 npm run screenshots` in `frontend` | Passed; screenshots captured without demo-mode banner |
-| Docker/Testcontainers availability | `dotnet test tests/Helpdesk.IntegrationTests/Helpdesk.IntegrationTests.csproj --no-restore -v minimal` | Blocked because Testcontainers cannot reach Docker at `unix:///var/run/docker.sock` |
+| README screenshots | `SCREENSHOT_BASE_URL=http://127.0.0.1:5175 npm run screenshots` in `frontend` | Passed |
+| Backend integration tests | `dotnet test tests/Helpdesk.IntegrationTests/Helpdesk.IntegrationTests.csproj` | Passed, 23/23 in GitHub Actions (Testcontainers PostgreSQL) |
 
 ## E2E Coverage
 
@@ -55,14 +55,10 @@ The Playwright suite currently verifies:
 
 ## Docker Note
 
-Docker-dependent checks require Docker Desktop with the Docker Compose plugin available in `PATH`.
-
-Once Docker Desktop is installed and running, verify the remaining environment-dependent checks with:
+Integration tests and the full stack need Docker with the Compose plugin:
 
 ```bash
 docker compose config
 dotnet test tests/Helpdesk.IntegrationTests/Helpdesk.IntegrationTests.csproj
 docker compose up --build
 ```
-
-The integration test failure observed during this QA pass happens before API tests execute. The failing fixture throws `DockerUnavailableException` while creating the PostgreSQL Testcontainers instance, so the result indicates missing Docker access rather than a failed application assertion.
