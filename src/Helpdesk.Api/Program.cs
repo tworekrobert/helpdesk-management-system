@@ -39,6 +39,11 @@ builder.Services.AddScoped<JwtTokenFactory>();
 builder.Services.AddScoped<TicketEmailNotificationService>();
 
 var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>() ?? new JwtOptions();
+if (Encoding.UTF8.GetByteCount(jwtOptions.SigningKey) < 32)
+{
+    throw new InvalidOperationException(
+        "Jwt:SigningKey is missing or shorter than 32 bytes. Set it in appsettings.Development.json or the Jwt__SigningKey environment variable.");
+}
 var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SigningKey));
 
 builder.Services

@@ -260,7 +260,7 @@ More details are available in [docs/architecture.md](docs/architecture.md).
 | File size guard | Ticket attachments are limited before storage |
 | Admin-only exports | Report exports, global audit log and management screens require Admin access |
 
-The demo configuration is intended for local review. Production deployment should replace demo secrets, configure proper identity infrastructure and move sensitive values into environment-specific secret storage.
+The JWT signing key lives only in `appsettings.Development.json` and `docker-compose.yml`. Outside Development the API refuses to start until `Jwt__SigningKey` is set (at least 32 bytes). The demo configuration is intended for local review. Production deployment should replace demo secrets, configure proper identity infrastructure and move sensitive values into environment-specific secret storage.
 
 ---
 

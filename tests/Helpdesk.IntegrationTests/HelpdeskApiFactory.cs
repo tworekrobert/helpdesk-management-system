@@ -16,6 +16,13 @@ public sealed class HelpdeskApiFactory : WebApplicationFactory<Program>, IAsyncL
         .WithPassword("helpdesk")
         .Build();
 
+    public HelpdeskApiFactory()
+    {
+        // Program.cs reads the key before ConfigureWebHost runs, and the Testing
+        // environment doesn't load appsettings.Development.json.
+        Environment.SetEnvironmentVariable("Jwt__SigningKey", "helpdesk-integration-tests-signing-key-32b");
+    }
+
     public async Task InitializeAsync()
     {
         await _database.StartAsync();
